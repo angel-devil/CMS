@@ -58,7 +58,7 @@
 							<tr >
 								<th  width=33%>重复密码:</th>
 								<td width=33%><input type="password" width=33% name="admininfo[password2]"  class="txt"></td>
-								<td width=33%><font color="red">{if $password eq 'diffent'}两次密码不相同{/if}</font></td>
+								<td width=33%><font color="red">{if !empty($password) && $password eq 'diffent'}两次密码不相同{/if}</font></td>
 							</tr>
 						</table>
 					</div>

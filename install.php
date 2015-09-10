@@ -62,7 +62,6 @@ if(!empty($_POST['admininfo']['username']) && !empty($_POST['admininfo']['passwo
 
 }
 	
-
 // //引用模板文件
 $smarty->display('install.tpl');   
 
