@@ -1,0 +1,7 @@
+全局变量保存为	config.php
+
+config.php保存格式改为为数组
+
+共用的头文件保存为	common_class.php
+
+类文件 sqlhelper.php
