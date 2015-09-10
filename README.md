@@ -17,3 +17,6 @@ sqlhelper.php
 login.php
 login.tpl
 install.tpl
+
+版本号：CMS_1.1.3.0910_ALPHA
+清除多余的临时文件、备份文件
