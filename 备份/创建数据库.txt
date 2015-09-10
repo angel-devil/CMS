@@ -1,9 +1,0 @@
-create table article_table(
-id int primary key,
-title varchar(50),
-subid int,
-foreign key(subid) references sub_table(subid) 
-)
-
-
-insert into article_table(id, title, subid) VALUES ($time,'title',10)
