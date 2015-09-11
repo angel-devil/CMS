@@ -38,7 +38,7 @@
 							<tr>
 								<th width=33% >	数据库密码:</th>
 								<td width=33%><input type="text" width=33% name="dbinfo[dbpw]" value="root"  class="txt"></td>
-								<td width=33%></td>
+								<td width=33%><font color="red">{if $err eq '1'}数据库信息不对{/if}</font></td>
 							</tr>
 						</table >
 						<div class="desc">
@@ -58,7 +58,9 @@
 							<tr >
 								<th  width=33%>重复密码:</th>
 								<td width=33%><input type="password" width=33% name="admininfo[password2]"  class="txt"></td>
-								<td width=33%><font color="red">{if !empty($password) && $password eq 'diffent'}两次密码不相同{/if}</font></td>
+								<td width=33%><font color="red">
+									{if !empty($password) && $password eq 'diffent'}两次密码不相同{/if}
+								</font></td>
 							</tr>
 						</table>
 					</div>

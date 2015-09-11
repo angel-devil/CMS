@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-09-08 03:15:09
+<?php /* Smarty version 3.1.27, created on 2015-09-11 01:49:09
          compiled from "templates\templates\table.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:904655ee52bd04da29_13761582%%*/
+/*%%SmartyHeaderCode:1426555f2331524e013_16199978%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '407df441642b820a58d6d6c1dabff0be870f5b4a' => 
     array (
       0 => 'templates\\templates\\table.tpl',
-      1 => 1441682106,
+      1 => 1441935338,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '904655ee52bd04da29_13761582',
+  'nocache_hash' => '1426555f2331524e013_16199978',
   'variables' => 
   array (
     'newnavid' => 0,
@@ -25,20 +25,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_55ee52bd11dc41_43397814',
+  'unifunc' => 'content_55f2331532feb6_96867058',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_55ee52bd11dc41_43397814')) {
-function content_55ee52bd11dc41_43397814 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_55f2331532feb6_96867058')) {
+function content_55f2331532feb6_96867058 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '904655ee52bd04da29_13761582';
+$_smarty_tpl->properties['nocache_hash'] = '1426555f2331524e013_16199978';
 ?>
 
 	<div id="rightcontent table-responsive" >
 		<table id="table1" class="table table-bordered table-hover " cellspacing="3" cellpadding="3" border="1">
 			<tbody>
 			<tr>
-			<!-- <th width='80px' style="display:none;" >导航ID</th> -->
+
 			<th  width='80px'>导航名</th>
 			<th width='80px'>导航排序</th>
 			<th width='80px'></th>

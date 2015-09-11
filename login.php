@@ -3,6 +3,15 @@
 require './common.php'; 
 require './config.php';
 
+//检测是否安装过
+$filename = 'lock.php';
+if (!file_exists($filename)) {
+echo "网站应用还未安装<br><br><a href='install.php'>自动跳转</a>";
+header("Refresh:3;url=install.php");
+exit;
+}
+
+
 $username = $_POST['username'];
 $password = $_POST['password'];
 
@@ -32,7 +41,7 @@ session_start();  //开启session
 //自动登录
 if (!empty($_SESSION['username']))
 {
-	// header("Location: admin.php");
+	header("Location: admin.php");
 }
 
 

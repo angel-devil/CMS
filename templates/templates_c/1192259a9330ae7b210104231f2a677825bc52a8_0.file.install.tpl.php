@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-09-02 09:28:42
+<?php /* Smarty version 3.1.27, created on 2015-09-11 03:10:36
          compiled from "templates\templates\install.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1690055e6c14acca429_06523794%%*/
+/*%%SmartyHeaderCode:461055f2462cc62647_61562184%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,24 +9,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1192259a9330ae7b210104231f2a677825bc52a8' => 
     array (
       0 => 'templates\\templates\\install.tpl',
-      1 => 1441186119,
+      1 => 1441939245,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1690055e6c14acca429_06523794',
+  'nocache_hash' => '461055f2462cc62647_61562184',
   'variables' => 
   array (
+    'err' => 0,
     'password' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_55e6c14adbb120_06639214',
+  'unifunc' => 'content_55f2462cd42130_59172028',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_55e6c14adbb120_06639214')) {
-function content_55e6c14adbb120_06639214 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_55f2462cd42130_59172028')) {
+function content_55f2462cd42130_59172028 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1690055e6c14acca429_06523794';
+$_smarty_tpl->properties['nocache_hash'] = '461055f2462cc62647_61562184';
 ?>
 <html>
 	<head>
@@ -72,7 +73,7 @@ $_smarty_tpl->properties['nocache_hash'] = '1690055e6c14acca429_06523794';
 							<tr>
 								<th width=33% >	数据库密码:</th>
 								<td width=33<?php echo '%>';?><input type="text" width=33% name="dbinfo[dbpw]" value="root"  class="txt"></td>
-								<td width=33<?php echo '%>';?></td>
+								<td width=33<?php echo '%>';?><font color="red"><?php if ($_smarty_tpl->tpl_vars['err']->value == '1') {?>数据库信息不对<?php }?></font></td>
 							</tr>
 						</table >
 						<div class="desc">
@@ -92,7 +93,9 @@ $_smarty_tpl->properties['nocache_hash'] = '1690055e6c14acca429_06523794';
 							<tr >
 								<th  width=33<?php echo '%>';?>重复密码:</th>
 								<td width=33<?php echo '%>';?><input type="password" width=33% name="admininfo[password2]"  class="txt"></td>
-								<td width=33<?php echo '%>';?><font color="red"><?php if ($_smarty_tpl->tpl_vars['password']->value == 'diffent') {?>两次密码不相同<?php }?></font></td>
+								<td width=33<?php echo '%>';?><font color="red">
+									<?php if (!empty($_smarty_tpl->tpl_vars['password']->value) && $_smarty_tpl->tpl_vars['password']->value == 'diffent') {?>两次密码不相同<?php }?>
+								</font></td>
 							</tr>
 						</table>
 					</div>

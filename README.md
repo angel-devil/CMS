@@ -20,3 +20,18 @@ install.tpl
 
 版本号：CMS_1.1.3.0910_ALPHA
 清除多余的临时文件、备份文件
+
+版本号：CMS_1.1.4.0911_ALPHA
+添加了:
+admin.php
+article.php
+editor.php
+index.php
+nav.php
+table.php
+修改了:
+install.php
+sqlhelper.php
+修改说明文档:
+页面说明文档.txt
+README.md

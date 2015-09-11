@@ -7,7 +7,6 @@ class sqlhelper{
   public $username;  //用户名
   public $password;  //密码
   public $dbname;    //数据库名
-  
 
   //建立连接数据库
   public function __construct($G)
@@ -20,17 +19,28 @@ class sqlhelper{
 
 
     //连接数据库 
-    $this->conn=mysql_connect($this->host,$this->username,$this->password);
-    if (!$this->conn)
-    {
-      die("连接失败".mysql_errno());
-    }
-    mysql_query("set names utf8",$this->conn);
-    mysql_select_db($this->dbname,$this->conn); //选择数据库
+   @ $this->conn=mysql_connect($this->host,$this->username,$this->password);
+
+   @ mysql_query("set names utf8",$this->conn);
+   @ mysql_select_db($this->dbname,$this->conn); //选择数据库
 
   }
 
+  public function dateisconn()
+  {
+    //连接数据库 
+   @ $this->conn=mysql_connect($this->host,$this->username,$this->password);
+    if (!$this->conn)
+    {
+      //die("连接失败".mysql_errno());
+      return false;
+    }
+    else
+    {
+      return true; 
+    }
 
+  }
 
   //打印数据库类配置信息
   public function print_config()
@@ -153,13 +163,15 @@ class data_save{
   $G['USERPASSWD']=$password;
   $G['DATENAME']=$dbname;
   $text='<?php $G='.var_export($G,true).';';
-  if(false!==fopen($file,'w+')){
+  $fileptr=fopen($file,'w+');
+  if(false!==$fileptr){
     file_put_contents($file,$text);
    }
   else
   {
     echo '创建失败';
   }
+  fclose($fileptr);
   }
 }
 ?>
