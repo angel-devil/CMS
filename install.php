@@ -68,6 +68,11 @@ if (!empty($_POST['dbinfo']['dbhost']) && !empty($_POST['dbinfo']['dbuser']) && 
         $fp2 = fopen($lockfile, 'w');
         fwrite($fp2,'installed');
         fclose($fp2);
+        //创建空文件夹
+        if (!file_exists('./editor/attached')){ mkdir ("./editor/attached");}
+        if (!file_exists('./editor/attached/image')){ mkdir ("./editor/attached/image");}
+        if (!file_exists('./templates/article')){ mkdir ("./templates/article");}
+        if (!file_exists('./templates/templates_c')){ mkdir ("./templates/templates_c");}
 		exit;
     }
 
