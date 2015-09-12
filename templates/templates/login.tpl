@@ -12,7 +12,7 @@
 		<div class=".controls" style="margin-top:100px;margin-left:45%">
 			
 			<h2>系统登录</h2>						
-					{$delaytime}
+				
 			<form class="form-horizontal" action="login.php" method="post" >
 				<div class="control-group">
 					<label class="control-label"  >用户名:</label>

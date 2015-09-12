@@ -12,10 +12,10 @@ $smarty->caching = false;
 
 
 
-session_start();  //开启session
+@session_start();  //开启session
 
 //注销
-if($_POST['action']=='logout')
+if(@$_POST['action']=='logout')
 {
 	session_destroy();
 	header("Location: login.php");

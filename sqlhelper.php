@@ -138,7 +138,7 @@ public function insert_sec($id,$subid,$title,$body,$releasedate,$pic1,$pic2,$pic
   public function select_nav($sql) {
     $arr=array();
         $res=mysql_query($sql);
-    while($row=mysql_fetch_assoc($res)){
+    while(@$row=mysql_fetch_assoc($res)){
       $arr[]=$row;
     }
 // echo $sql;

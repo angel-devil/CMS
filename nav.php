@@ -3,7 +3,7 @@
 require './common.php';
 require './config.php';
 
-
+$smarty->assign('logined','false');
 session_start();  //开启session
 //自动登录
 if (!empty($_SESSION['username']))

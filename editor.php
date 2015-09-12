@@ -34,5 +34,5 @@ if(!empty($_POST['subid']))
 $smarty->display('admin.tpl');
 $smarty->display('editor.tpl');
 
-$smarty->assign('subid',$_POST['subid']);	
+@$smarty->assign('subid',$_POST['subid']);	
 ?>
