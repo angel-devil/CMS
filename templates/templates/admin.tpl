@@ -4,11 +4,11 @@
 <script src="./bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 <table>
 	<tr>
-		<td width="95%" align="center"><a href="index.php"><input type="button" class="btn  btn-primary btn-lg btn-block" value="首页"></a></td>
+		<td width="100%" align="center"><a href="index.php"><input type="button" class="btn  btn-primary btn-lg btn-block" value="首页"></a></td>
 		
 		<form class="form-horizontal" method="post" action="admin.php"  >			
 			<input type='text' name="action" value='logout'  style="display:none;"/></th>
-			<td width="10%" ><input type="submit" class="btn  btn-lg   btn-danger" value="注销"></td>
+			<td width="10%" ><button class="btn  btn-lg   btn-danger glyphicon glyphicon-log-out"></button></td>
 		</form>
 	</tr>
 </table>

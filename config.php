@@ -1,6 +1,6 @@
 <?php $G=array (
   'HOSTNAME' => 'localhost',
   'USERNAME' => 'root',
-  'USERPASSWD' => '',
+  'USERPASSWD' => 'root',
   'DATENAME' => 'portal',
 );

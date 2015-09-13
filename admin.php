@@ -27,6 +27,18 @@ if(empty($_SESSION['username']))
 	header("Location: login.php");
 }
 
+//删除文件
+if (@$_POST['function']=="delart")
+{
+    $sql = "delete from article_table WHERE id=".$_POST['artid'];
+    $s->execute_sql($sql);
+
+    //删除本地缓存
+    $filename="templates/article/".$_POST['artid'].".tpl";
+    @unlink($filename);
+    header("Location: admin.php");
+    exit;
+}
 
 $smarty->display('admin.tpl');
 $smarty->display('table.tpl');

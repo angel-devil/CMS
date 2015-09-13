@@ -47,6 +47,7 @@ $newsubid = $s->select_nav("select max(subid) as subid from sub_table");
 //所有导航条和子菜单
 $smarty->assign('navarray',$s->select_nav("select * from nav_table  order by navsort;"));
 $smarty->assign('subarray',$s->select_nav("select * from sub_table  order by subsort;"));
+$smarty->assign('articlearray',$s->select_nav("select * from article_table  order by id;"));
 
 //引用模板文件
 // $smarty->display('table.tpl');
