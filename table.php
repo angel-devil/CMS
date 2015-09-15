@@ -3,10 +3,18 @@
 require './config.php';
 require './common.php';
 
+
+//执行sql语句
+$s = new sqlhelper($G);
+
+
 //点击新增导航条按钮
 if (@$_POST['function'] == 'addnav')
 {
     @$sql = "insert into nav_table (navid,navname,navsort) VALUES (".$_POST[navid].",'".$_POST[navname]."',".$_POST[navsort].")";
+    @$s->execute_sql($sql);
+    header("Location: admin.php");
+    exit;
 }
 
 //点击删除导航条按钮
@@ -15,6 +23,12 @@ if (@$_POST['function'] == 'delnav')
     @$sql = "delete from nav_table WHERE navid=".$_POST['navid']."";
 }
 
+
+//点击更新导航栏信息
+if(@$_POST['function']=='update_nav')
+{
+	@$sql = "UPDATE nav_table SET navname='".$_POST['nname']."',navsort=".$_POST['nid']."   WHERE navid=".$_POST['navid']."";
+}
 
 //点击新增子菜单按钮
 if (@$_POST['function'] == 'addsub')
@@ -31,9 +45,12 @@ if (@$_POST['function'] == 'delsub')
 }
 
 
+//点击更新子菜单栏信息
+if(@$_POST['function']=='update_sub')
+{
+	@$sql = "UPDATE sub_table SET subname='".$_POST['sname']."',subsort=".$_POST['sid']."   WHERE subid=".$_POST['subid']."";
+}
 
-//执行sql语句
-$s = new sqlhelper($G);
 @$s->execute_sql($sql);
 
 //目前导航条最的id，继续累加

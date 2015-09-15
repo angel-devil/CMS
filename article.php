@@ -35,7 +35,7 @@ if (@$_POST['function']=="delart")
 }
 
 $smarty->display('nav.tpl');
-
+echo "<br>";
 @$smarty->assign('navarray',$s->select_nav("select * from article_table;"));
 @$article = $s->select_nav("select title,id from article_table where subid=".$subid." order by id ;");
 
